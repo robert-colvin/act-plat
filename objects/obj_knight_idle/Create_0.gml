@@ -1,11 +1,14 @@
 /// @description object setup and vars
 #region movement vars
-curr_hp = 5;
+hp = 30;
 curr_hspeed = 0;
 curr_vspeed = 0;
 gravity_constant = 0.5;
 walk_speed = 3;
 jump_speed = 8
+vulnerable = true;
+iframes = 20;
+iframe_countdown = false;
 #endregion
 
 #region sprite vars
@@ -33,7 +36,9 @@ state = PLAYER_STATE.IDLE;
 enum PLAYER_STATE {
 	IDLE,
 	ATTACKING,
-	ATTACKING_COMBO
+	ATTACKING_COMBO,
+	HIT,
+	DEAD
 }
 #endregion
 
